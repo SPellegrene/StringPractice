@@ -16,7 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *firstName = @"Samuel";
+    NSString *lastName = @"Pellegrene";
+    
+//    Practicing string interpolation and concatination
+    NSString *fullName = [NSString stringWithFormat:@"%@ John %@", firstName, lastName];
+    
+    NSString *display = [fullName stringByAppendingString:@" - Died in 1000BC"];
+    
+    NSLog(@"Fullname: %@", display);
+    
+//    Practicing string comparison
+    NSString *var1 = @"SAM";
+    NSString *var2 = @"sam";
+    
+    if ([var1 isEqualToString:var2] == NSOrderedSame) {
+        NSLog(@"What an awesome guy!");
+    } else {
+        NSLog(@"What a jerk!");
+    }
+ 
 }
 
 
